@@ -1,1 +1,1 @@
-not ready yet
+Check out the blog post here -> https://realpython.com/blog/python/fingerprinting-images-for-near-duplicate-detection/
