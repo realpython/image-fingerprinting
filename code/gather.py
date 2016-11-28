@@ -49,10 +49,10 @@ for imagePath in glob2.iglob(args["input"] + "/*/*.jpg"):
 			height = int(image.size[1] * ratio)
 			image = image.resize((width, height), Image.ANTIALIAS)
 
-			# generate a random filename for the image and copy
+			# generate a random filename for the image and save
 			# it to the output directory
-			adjFilename = str(uuid.uuid4()) + ".jpg"
-			shutil.copy(imagePath, args["output"] + "/" + adjFilename)
+			adjFilename = args["output"] + "/" + str(uuid.uuid4()) + ".jpg"
+			image.save(adjFilename)
 
 # close the output file
 output.close()
